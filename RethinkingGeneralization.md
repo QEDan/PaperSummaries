@@ -2,17 +2,19 @@
 ##Dan Mazur, February 2017##
 ##Prepared for the Advanced Data Science Reading Meetup, Vancouver, BC##
 
+[Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530) - Zhang, et al
+
 ###What problem are they trying to solve?###
-Deep artificial neural networks (ANNs) can exhibit a small difference between training and test performance. This is surprising in light of the huge number of free parameters involved in the optimization, which you might expect to cause overfitting (i.e. low training error, but high test error). The authors perform some experiments and calculations to test our best explanations for the effect.
+Deep [artificial neural networks](https://en.wikipedia.org/wiki/Artificial_neural_network) (ANNs) can exhibit a small difference between training and test performance. This is surprising in light of the huge number of free parameters involved in the optimization, which you might expect to cause overfitting (i.e. low training error, but high test error). The authors perform some experiments and calculations to test our best explanations for the effect.
 
 ###Why is this an interesting problem?###
 We do not have a good theoretical explanation for this ability of neural networks to generalize so successfully. Nevertheless, they are wildly successful at creating generalizeable models in many domains. Understanding why will help us to interpret ANN models and may lead to principals that will guide researchers in designing model architectures.
 
 ###How has this been attempted previously?###
 The paper discusses three popular explanations for the generalization performance of ANNs: VC-dimension, Rademacher complexity, and uniform stability.
-VC-dimension: https://en.wikipedia.org/wiki/VC_dimension - The cardinality of the largest set of points that the classification algorithm can shatter. 
-Rademacher complexity: Measures a model's capability of fitting all possible +/-1 binary label assignments.
-Uniform stability: How sensitive an algorithm is to the replacement of a single example. This is a property of the algorithm and does not take into account the data or the labels.
+* [VC-dimension](https://en.wikipedia.org/wiki/VC_dimension): - The cardinality of the largest set of points that the classification algorithm can shatter. 
+* [Rademacher complexity](https://en.wikipedia.org/wiki/Rademacher_complexity) - Measures a model's capability of fitting all possible +/-1 binary label assignments.
+* [Uniform stability] (https://en.wikipedia.org/wiki/Stability_(learning_theory)) - How sensitive an algorithm is to the replacement of a single example. This is a property of the algorithm and does not take into account the data or the labels.
 
 Explicit regularization methods (e.g. weight decay, dropout, and data augmentation) are also often said to contribute to the generalizeability of ANNs.
 
@@ -45,3 +47,12 @@ This later paper is skeptical of the conclusions in the "Rethinking Generalizati
 This casts doubt on the conclusion that the Zhang, et al team make in the "Conclusion" section: "Our results challenge the classical view of learning by showing that many successful neural networks easily have the effective capacity for sheer memorization. This leads us to believe that these models may very well make use of massive memorization when tackling the problems they are trained to solve." The basic experimental results of both papers are compatible with each other, as far as I can tell, but the conflict between different interpretations of the results highlights the difficulties in explaining the generalization ability of ANNs.
 
 The debate rages on!
+
+###Glossary
+* [Artificial Neural Network](https://en.wikipedia.org/wiki/Artificial_neural_network) - A computational model consisting of interconnected artificial neurons. Machine learning problems can be solved by optimizing weights associated with the connections.
+* [Data Augmentation](http://stats.stackexchange.com/questions/153696/data-augmentation-techniques-for-general-datasets) - A regularization technique where overfitting is prevented by creating additional training examples from the training set by applying transformations that do not affect the example's label. For image data, these transformations often include rotations, mirroring, adjusting the contrast, etc.
+* [Dropout](https://en.wikipedia.org/wiki/Dropout_(neural_networks)) - A regularization method that prevents overfitting by randomly dropping neurons from the network during training.
+* [Rademacher complexity](https://en.wikipedia.org/wiki/Rademacher_complexity) - Measures a model's capability of fitting all possible +/-1 binary label assignments.
+* [Uniform stability] (https://en.wikipedia.org/wiki/Stability_(learning_theory)) - How sensitive an algorithm is to the replacement of a single example. This is a property of the algorithm and does not take into account the data or the labels.
+* [VC-dimension](https://en.wikipedia.org/wiki/VC_dimension) - The cardinality of the largest set of points that the classification algorithm can shatter.
+* [Weight Decay](https://en.wikipedia.org/wiki/Regularization_(mathematics)#Regularization_in_statistics_and_machine_learning) - A regularization method which restricts the complexity of the neural network (and therefore prevents overfitting) by penalizing large weights in the loss function.
