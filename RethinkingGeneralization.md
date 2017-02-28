@@ -28,19 +28,19 @@ With their experiments, they studied a selection of popular explicit regularizat
 
 In addition to the experimental approach, the authors also studied the ideas theoretically. The authors argue that the usual approach of discussing the expressivity of ANNs in terms of the continuous function domain that they are able to express is not as useful as studying the expressive power of ANNs on a finite sample of data. They construct a theoretical 2 layer ReLU network to study the expressivity of neural networks on a finite sample of data.
 
-The role played by the implicit regularization provided by stochastic gradient descent in the ANN training process is studied theoretically by appealing to linear models.
+The role played by the implicit regularization provided by [stochastic gradient descent](http://stats.stackexchange.com/questions/153696/data-augmentation-techniques-for-general-datasets) in the ANN training process is studied theoretically by appealing to linear models.
 
 ###What did they find?###
 Deep neural networks easily fit random labels.
 
 Explicit regularization may improve generalization performance, but is neither necessary nor by itself sufficient for controlling generalization error.
 
-There exists a two-layer neural network with ReLU activations and 2n+d weights that can represent any function on a sample size n in d dimensions.
+There exists a two-layer neural network with [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) activations and 2n+d weights that can represent any function on a sample size n in d dimensions.
 
 With linear models, stochastic gradient descent behaves as an implicit regularizer. This observation doesn't explain why certain ANN architectures perform better than others, the authors suggest that it should get more attention for its role in the generalization performance of ANNs.
 
 ###What has the response been from other researchers?###
-A more recent paper is a response to this "Rethinking Generalization" paper: DEEP NETS DON’T LEARN VIA MEMORIZATION by Kreuger, et al.
+A more recent paper is a response to this "Rethinking Generalization" paper: [DEEP NETS DON’T LEARN VIA MEMORIZATION](https://openreview.net/pdf?id=rJv6ZgHYg) by Kreuger, et al.
 
 This later paper is skeptical of the conclusions in the "Rethinking Generalization" paper. They reproduced the randomization experiments, but paid closer attention to the capacity of the trained networks, the time to convergence during training, and the complexity of the functions learned. From their results, they came to the conclusion that massive memorization cannot explain the training and generalization performance of the networks. 
 
@@ -54,5 +54,7 @@ The debate rages on!
 * [Dropout](https://en.wikipedia.org/wiki/Dropout_(neural_networks)) - A regularization method that prevents overfitting by randomly dropping neurons from the network during training.
 * [Rademacher complexity](https://en.wikipedia.org/wiki/Rademacher_complexity) - Measures a model's capability of fitting all possible +/-1 binary label assignments.
 * [Uniform stability] (https://en.wikipedia.org/wiki/Stability_(learning_theory)) - How sensitive an algorithm is to the replacement of a single example. This is a property of the algorithm and does not take into account the data or the labels.
+* [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) - Rectified Linear Unit. A non-linear activation function for artificial neurons. ReLU(x) = max(0,x).
+* [Stochastic Gradient Descent](http://stats.stackexchange.com/questions/153696/data-augmentation-techniques-for-general-datasets) - An approximate method for solving an optimization problem, frequently used in ANNs. A sample of examples is used to compute an approximate gradient at each iteration.
 * [VC-dimension](https://en.wikipedia.org/wiki/VC_dimension) - The cardinality of the largest set of points that the classification algorithm can shatter.
 * [Weight Decay](https://en.wikipedia.org/wiki/Regularization_(mathematics)#Regularization_in_statistics_and_machine_learning) - A regularization method which restricts the complexity of the neural network (and therefore prevents overfitting) by penalizing large weights in the loss function.
