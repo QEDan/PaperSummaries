@@ -20,24 +20,24 @@ Explicit regularization methods (e.g. weight decay, dropout, and data augmentati
 
 ###What did they do?###
 The authors used several different flavours of randomization to experimentally study how the training and generalization performance of the ANNs would be affected:
-The networks were trained on a copy of the data after replacing the true labels with randomized ones.  
-In another variant, the networks were trained after replacing the true images by completely random pixels. 
-In a final variant, a smooth interpolation was used between the original images and the randomized pixels to study the ANNs performance as a function of the interpolation parameter.
+* The networks were trained on a copy of the data after replacing the true labels with randomized ones.  
+* In another variant, the networks were trained after replacing the true images by completely random pixels. 
+* In a final variant, a smooth interpolation was used between the original images and the randomized pixels to study the ANNs performance as a function of the interpolation parameter.
 
 With their experiments, they studied a selection of popular explicit regularization schemes: data augmentation, weight decay, and dropout.
 
-In addition to the experimental approach, the authors also studied the ideas theoretically. The authors argue that the usual approach of discussing the expressivity of ANNs in terms of the continuous function domain that they are able to express is not as useful as studying the expressive power of ANNs on a finite sample of data. They construct a theoretical 2 layer ReLU network to study the expressivity of neural networks on a finite sample of data.
+In addition to the experimental approach, the authors also studied the ideas theoretically. The authors argue that the usual approach of discussing the expressivity of ANNs in terms of the continuous function domain that they are able to express is not as useful as studying the expressive power of ANNs on a finite sample of data. They construct a theoretical 2 layer [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) network to study the expressivity of neural networks on a finite sample of data.
 
 The role played by the implicit regularization provided by [stochastic gradient descent](http://stats.stackexchange.com/questions/153696/data-augmentation-techniques-for-general-datasets) in the ANN training process is studied theoretically by appealing to linear models.
 
 ###What did they find?###
-Deep neural networks easily fit random labels.
+Deep neural networks easily fit random labels. This is a hallmark of memorization.
 
 Explicit regularization may improve generalization performance, but is neither necessary nor by itself sufficient for controlling generalization error.
 
-There exists a two-layer neural network with [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) activations and 2n+d weights that can represent any function on a sample size n in d dimensions.
+There exists a two-layer neural network with [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) activations and 2n+d weights that can represent any function on a sample size n in d dimensions. This means that even moderately-sized neural networks are capable of memorizing every training sample.
 
-With linear models, stochastic gradient descent behaves as an implicit regularizer. This observation doesn't explain why certain ANN architectures perform better than others, the authors suggest that it should get more attention for its role in the generalization performance of ANNs.
+With linear models, stochastic gradient descent behaves as an implicit regularizer. However, this observation doesn't explain why certain ANN architectures perform better than others, since SGD is used in many different architectures. The authors suggest that it should get more attention for its role in the generalization performance of ANNs.
 
 ###What has the response been from other researchers?###
 A more recent paper is a response to this "Rethinking Generalization" paper: [DEEP NETS DON’T LEARN VIA MEMORIZATION](https://openreview.net/pdf?id=rJv6ZgHYg) by Kreuger, et al.
