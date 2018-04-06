@@ -28,17 +28,17 @@ Many researchers have attempted to get good performance from deep FNNs with vary
 The preprint for this paper was published only a few months ago, so it is hard to evaluate the impact. It has already been [cited dozens of times](http://adsabs.harvard.edu/cgi-bin/nph-ref_query?bibcode=2017arXiv170602515K&amp;refs=CITATIONS&amp;db_key=PRE). Many researchers are making use of this activation function for their own research, and several papers have compared the performance of SELU activations with other options empirically (e.g. [The "Swish" paper](https://arxiv.org/abs/1710.05941)). Somewhat ironically, most of the researchers citing this paper are using SELU activations in CNNs and RNNs for computer vision and sequential tasks.
 
 ### Other summaries
-[An intro to self-normalising neural networks (SNN)](https://medium.com/@damoncivin/self-normalising-neural-networks-snn-2a972c1d421) -Damon Civin
-[SELU — Make FNNs Great Again (SNN)](https://towardsdatascience.com/selu-make-fnns-great-again-snn-8d61526802a9) -Elior Cohen
-[Paper Review: Self-Normalizing Neural Networks](http://www.erogol.com/paper-review-self-normalizing-neural-networks/) -Erogol
+- [An intro to self-normalising neural networks (SNN)](https://medium.com/@damoncivin/self-normalising-neural-networks-snn-2a972c1d421) -Damon Civin
+- [SELU — Make FNNs Great Again (SNN)](https://towardsdatascience.com/selu-make-fnns-great-again-snn-8d61526802a9) -Elior Cohen
+- [Paper Review: Self-Normalizing Neural Networks](http://www.erogol.com/paper-review-self-normalizing-neural-networks/) -Erogol
 
 ### Implementation/Code
-[Authors' Tensorflow implementations on Github](https://github.com/bioinf-jku/SNNs)
+- [Authors' Tensorflow implementations on Github](https://github.com/bioinf-jku/SNNs)
 
 ### Glossary
-Activation Function (TODO)
-[Artificial Neural Network (ANN)](https://en.wikipedia.org/wiki/Artificial_neural_network)
-[Convolutional Neural Netowrk (CNN)] (https://en.wikipedia.org/wiki/Convolutional_neural_network)
-Exploding and vanishing gradient problem(TODO)
-Normalization (TODO)
-[Recurrent Neural Network (RNN)](https://en.wikipedia.org/wiki/Recurrent_neural_network)
+- Activation Function (TODO)
+- [Artificial Neural Network (ANN)](https://en.wikipedia.org/wiki/Artificial_neural_network)
+- [Convolutional Neural Netowrk (CNN)] (https://en.wikipedia.org/wiki/Convolutional_neural_network)
+- Exploding and vanishing gradient problem(TODO)
+- Normalization (TODO)
+- [Recurrent Neural Network (RNN)](https://en.wikipedia.org/wiki/Recurrent_neural_network)
