@@ -1,6 +1,6 @@
 # Summary of Self-Normalizing Neural Networks
 ## Dan Mazur, March 2018
-## Prepared for the Advanced Data Science Reading Meetup, Vancouver, BC
+## Prepared for the [Advanced Data Science Reading Meetup](https://www.meetup.com/LearnDataScience/events/248105899/), Vancouver, BC
 
 [Self-Normalizing Neural Networks](https://arxiv.org/abs/1706.02515) - Klambauer, et al
 
@@ -66,9 +66,10 @@ The preprint for this paper was published only a few months ago, so it is hard t
 - [Authors' Tensorflow implementations on Github](https://github.com/bioinf-jku/SNNs)
 
 ### Glossary
-- Activation Function (TODO)
+- [Activation Function](https://en.wikipedia.org/wiki/Activation_function)
 - [Artificial Neural Network (ANN)](https://en.wikipedia.org/wiki/Artificial_neural_network)
-- [Convolutional Neural Netowrk (CNN)] (https://en.wikipedia.org/wiki/Convolutional_neural_network)
-- Exploding and vanishing gradient problem(TODO)
-- Normalization (TODO)
-- [Recurrent Neural Network (RNN)](https://en.wikipedia.org/wiki/Recurrent_neural_network)
+- [Convolutional Neural Netowrk (CNN)](https://en.wikipedia.org/wiki/Convolutional_neural_network)
+- [Dropout Regularization](https://en.wikipedia.org/wiki/Dropout_(neural_networks))
+- Exploding and [vanishing gradient problem](https://en.wikipedia.org/wiki/Vanishing_gradient_problem) - Certain conditions in a neural network can cause the gradients of the loss function to become very large or very small and this makes it difficult to solve the optimization problem.
+- [Normalization](https://en.wikipedia.org/wiki/Normalization_(statistics)) - Transforming a data set to have zero mean and unit variance (i.e. variance=1). This helps to standardize the scales involved between different dimensions in the data.
+- [Recurrent Neural Network (RNN)](https://en.wikipedia.org/wiki/Recurrent_neural_network) - A network architecture usually used for sequential data where previous (or later) elements of the sequence are inputs to a neuron in addition to the current element of the sequence.
