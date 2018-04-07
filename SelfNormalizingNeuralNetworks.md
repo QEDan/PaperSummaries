@@ -19,7 +19,8 @@ This problem is also of theoretical interest. We do not have a complete theoreti
 Many researchers have attempted to get good performance from deep FNNs with varying amounts of success. The authors do not review all of the attempts that have been tried, but simply observe the lack of FNNs in state-of-the-art systems. This paper is the first to discuss that the issue may be caused by instabilities of normalization.
 
 ### What did they do?
-[TODO]
+The SELU activation is given by the equation,
+![test equation](http://latex.codecogs.com/svg.latex?%7B%5Crm%20selu%7D%28x%29%20%5C%20%26%3D%20%5C%20%5Clambda%20%5C%20%5Cbegin%7Bcases%7D%20x%20%26%20%5Ctext%7Bif%20%7D%20x%20%3E%200%20%5C%5C%20%5Calpha%20e%5E%7Bx%7D-%5Calpha%20%26%20%5Ctext%7Bif%20%7D%20x%20%5Cleq%200%20%5Cend%7Bcases%7D%20%5C%20.)
 
 ### What did they find?
 [TODO]
