@@ -31,10 +31,28 @@ The authors prove that the SELU activation function results in self-normalizing 
 
 ![Arrows](https://github.com/QEDan/PaperSummaries/blob/master/images/SelfNormalizingNeuralNetworks/Figure2_arrows_new.png
 )
+The above figure shows the stable fixed point. The mapping is applied between each layer of a deep neural network. Through repeated applications of the mapping, the neural network activations are normalized because the distributions are driven toward the stable fixed point.
+
+In addition to this self-normalizing property, the authors also prove some additional properties of SNNs:
+- They do not suffer from exploding gradients (Theorem 2)
+- They do not suffer from vanishing gradients (Theorem 3)
+- The weights can be initialized to fulfill the constraints required in the proof
+- The dropout regularization algorithm can be modified to preserve the self-normalizing properties of the network (alpha dropout)
 
 
 ### What did they find?
-[TODO]
+The authors test their ideas empirically by comparing with other FNN techniques on a variety of benchmark classification tasks. The benchmark tasks are:
+- 121 UCI Machine Learning Repository datasets
+- Drug discovery: The Tox21 challenge dataset
+- Astronomy: Prediction of pulsars in the HTRU2 dataset
+
+![cifar10](https://github.com/QEDan/PaperSummaries/blob/master/images/SelfNormalizingNeuralNetworks/cifar10.png) ![mnist](https://github.com/QEDan/PaperSummaries/blob/master/images/SelfNormalizingNeuralNetworks/mnist.png)
+
+The authors also provide these training curves comparing the training of a variety of FNN architectures on CIFAR10 (left) and MNIST (right)
+
+The authors find that across a large variety of tasks, deep SNN architectures outperform other FNN architectures. The best performing SNNs are typically much deeper than the best performing non-SNN FNNs.
+
+
 
 ### What has the response been from other researchers?
 The preprint for this paper was published only a few months ago, so it is hard to evaluate the impact. It has already been [cited dozens of times](http://adsabs.harvard.edu/cgi-bin/nph-ref_query?bibcode=2017arXiv170602515K&amp;refs=CITATIONS&amp;db_key=PRE). Many researchers are making use of this activation function for their own research, and several papers have compared the performance of SELU activations with other options empirically (e.g. [The "Swish" paper](https://arxiv.org/abs/1710.05941)). Somewhat ironically, most of the researchers citing this paper are using SELU activations in CNNs and RNNs for computer vision and sequential tasks.
