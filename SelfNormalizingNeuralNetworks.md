@@ -20,7 +20,18 @@ Many researchers have attempted to get good performance from deep FNNs with vary
 
 ### What did they do?
 The SELU activation is given by the equation,
-![test equation](http://latex.codecogs.com/svg.latex?%7B%5Crm%20selu%7D%28x%29%20%5C%20%26%3D%20%5C%20%5Clambda%20%5C%20%5Cbegin%7Bcases%7D%20x%20%26%20%5Ctext%7Bif%20%7D%20x%20%3E%200%20%5C%5C%20%5Calpha%20e%5E%7Bx%7D-%5Calpha%20%26%20%5Ctext%7Bif%20%7D%20x%20%5Cleq%200%20%5Cend%7Bcases%7D%20%5C%20.)
+
+![Definition of SELU activation function](http://latex.codecogs.com/svg.latex?%7B%5Crm%20selu%7D%28x%29%20%5C%20%26%3D%20%5C%20%5Clambda%20%5C%20%5Cbegin%7Bcases%7D%20x%20%26%20%5Ctext%7Bif%20%7D%20x%20%3E%200%20%5C%5C%20%5Calpha%20e%5E%7Bx%7D-%5Calpha%20%26%20%5Ctext%7Bif%20%7D%20x%20%5Cleq%200%20%5Cend%7Bcases%7D%20%5C%20.)
+
+![activation functions](https://github.com/QEDan/PaperSummaries/blob/master/images/SelfNormalizingNeuralNetworks/activationFunctions_out.png)
+
+In the figure above, the SELU activation function is shown as the purple curve in comparison to other common activation functions such as the ReLU (blue).
+
+The authors prove that the SELU activation function results in self-normalizing neural networks. Specifically, the mapping between the mean and variance of one layer to the mean, ![mu](http://latex.codecogs.com/svg.latex?\mu), and variance, ![nu](http://latex.codecogs.com/svg.latex?\nu), of the next layer has a stable fixed point at ![mu=0](http://latex.codecogs.com/svg.latex?\mu=0), ![nu=1](http://latex.codecogs.com/svg.latex?\nu=1) when ![alpha=1.6733](http://latex.codecogs.com/svg.latex?\alpha=1.6733) and ![lambda=1.0507](http://latex.codecogs.com/svg.latex?\lambda=1.0507)
+
+![Arrows](https://github.com/QEDan/PaperSummaries/blob/master/images/SelfNormalizingNeuralNetworks/Figure2_arrows_new.png
+)
+
 
 ### What did they find?
 [TODO]
