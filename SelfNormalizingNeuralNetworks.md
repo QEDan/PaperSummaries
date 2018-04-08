@@ -29,6 +29,8 @@ In the figure above, the SELU activation function is shown as the purple curve i
 
 The authors prove that the SELU activation function results in self-normalizing neural networks. Specifically, the mapping between the mean and variance of one layer to the mean, ![mu](http://latex.codecogs.com/svg.latex?\mu), and variance, ![nu](http://latex.codecogs.com/svg.latex?\nu), of the next layer has a stable fixed point at ![mu=0](http://latex.codecogs.com/svg.latex?\mu=0), ![nu=1](http://latex.codecogs.com/svg.latex?\nu=1) when ![alpha=1.6733](http://latex.codecogs.com/svg.latex?\alpha=1.6733) and ![lambda=1.0507](http://latex.codecogs.com/svg.latex?\lambda=1.0507)
 
+The computer-assisted proof is given in a 90 page appendix, although an overview is given on page 5 beneath Theorem 1. The authors use the [Banach Fixed Point Theorem](https://en.wikipedia.org/wiki/Banach_fixed-point_theorem) to show that there is a unique fixed point and that it is stable and attracting.
+
 ![Arrows](https://github.com/QEDan/PaperSummaries/blob/master/images/SelfNormalizingNeuralNetworks/Figure2_arrows_new.png
 )
 The above figure shows the stable fixed point. The mapping is applied between each layer of a deep neural network. Through repeated applications of the mapping, the neural network activations are normalized because the distributions are driven toward the stable fixed point.
@@ -66,10 +68,12 @@ The preprint for this paper was published only a few months ago, so it is hard t
 - [Authors' Tensorflow implementations on Github](https://github.com/bioinf-jku/SNNs)
 
 ### Glossary
-- [Activation Function](https://en.wikipedia.org/wiki/Activation_function)
-- [Artificial Neural Network (ANN)](https://en.wikipedia.org/wiki/Artificial_neural_network)
+- [Activation Function](https://en.wikipedia.org/wiki/Activation_function) - The function in an ANN that defines the output from a neuron given its inputs.
+- [Artificial Neural Network (ANN)](https://en.wikipedia.org/wiki/Artificial_neural_network) - A strategy for building machine learning models based on a collection of nodes (artificial neurons) in a network.
+- [Banach Fixed Point Theorem](https://en.wikipedia.org/wiki/Banach_fixed-point_theorem) - A mathematical theorem that guarantees unique [fixed points](https://en.wikipedia.org/wiki/Fixed_point_(mathematics)) in self-mapping metric spaces under certain conditions.
 - [Convolutional Neural Netowrk (CNN)](https://en.wikipedia.org/wiki/Convolutional_neural_network)
 - [Dropout Regularization](https://en.wikipedia.org/wiki/Dropout_(neural_networks))
 - Exploding and [vanishing gradient problem](https://en.wikipedia.org/wiki/Vanishing_gradient_problem) - Certain conditions in a neural network can cause the gradients of the loss function to become very large or very small and this makes it difficult to solve the optimization problem.
+- [Fixed point](https://en.wikipedia.org/wiki/Fixed_point_(mathematics)) - A point on a function's domain that is mapped to itself by the function.
 - [Normalization](https://en.wikipedia.org/wiki/Normalization_(statistics)) - Transforming a data set to have zero mean and unit variance (i.e. variance=1). This helps to standardize the scales involved between different dimensions in the data.
 - [Recurrent Neural Network (RNN)](https://en.wikipedia.org/wiki/Recurrent_neural_network) - A network architecture usually used for sequential data where previous (or later) elements of the sequence are inputs to a neuron in addition to the current element of the sequence.
