@@ -49,9 +49,9 @@ and identifying the similarities and differences in the different variants can h
     * e.g. A factory offers an incentive for the workers to produce a large number of widgets. As a result, the factory produces very small widgets in enormous quantities. The widgets are too small to be useful to the company.
 
 ### Glossary
-**The Metric / The Proxy** - The objective that is being optimized for. The paper alternates between referring to a metric or the proxy.
-**The Goal** - The "real" objective that one wants to optimize for by solving the optimization problem using the metric. We can not directly act on the goal because of incomplete knowledge, so we act on the metric/proxy.
-**The Regulator** - An agent who makes decisions to optimize the metric/proxy.
+* **The Metric / The Proxy** - The objective that is being optimized for. The paper alternates between referring to a metric or the proxy.
+* **The Goal** - The "real" objective that one wants to optimize for by solving the optimization problem using the metric. We can not directly act on the goal because of incomplete knowledge, so we act on the metric/proxy.
+* **The Regulator** - An agent who makes decisions to optimize the metric/proxy.
 
 ### See Also
 * [Goodhart Taxonomy](https://www.alignmentforum.org/posts/EbFABnst8LsidYs5Y/goodhart-taxonomy)
