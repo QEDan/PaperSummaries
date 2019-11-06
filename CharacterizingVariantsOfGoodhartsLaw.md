@@ -31,6 +31,7 @@ and identifying the similarities and differences in the different variants can h
     * e.g. An advertising campaign causes both a higher click-through rate and more revenue. After learning this, we put a ton of money into advertising. After that intervention, the correlation between our click-through rate and our revenue is likely to be smaller than before our intervention.
   * Intermediary Intervention - In this case, The Goal causes a factor, X, which causes The Metric. The regulator intervenes in X, breaking the causal relationship between The Goal and The Metric.
     * e.g. We want to train a reinforcement learning agent to race a boat around a track in a video game. Winning the race gives the agent a large number of points, so we use points as our Metric. Instead of trying to win the race, the agent learns to do [donuts in an isolated lagoon](https://www.youtube.com/embed/tlOIHko8ySg) to score points.
+    * e.g. More generally, it is a relatively common failure mode of reinforcement learning systems that they figure out a way to obtain the reward without performing the task. This is called [reward tampering](https://arxiv.org/abs/1908.04734v2).
   * Metric Manipulation - In this case, the regulator intervenes directly in the metric, breaking the relationship with the goal.
     * A student has a goal of learning physics. Instead of going to class and doing the homework, she hacks into the school computer and gives herself a passing grade at the end of term.
 * Non-Causal Goodhart effects in Causal Systems - In these cases, the regulator is mistaken about the form of the causal relationship
@@ -54,3 +55,4 @@ and identifying the similarities and differences in the different variants can h
 
 ### See Also
 * [Goodhart Taxonomy](https://www.alignmentforum.org/posts/EbFABnst8LsidYs5Y/goodhart-taxonomy)
+* [Classifying Specification Problems as Variants of Goodhart's Law](https://vkrakovna.wordpress.com/2019/08/19/classifying-specification-problems-as-variants-of-goodharts-law/)
